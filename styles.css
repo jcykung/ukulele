@@ -1,0 +1,136 @@
+body,html {
+	margin:0px;
+	background:url("images/background.jpg"); /*Using a background wood pattern that repeats nicely*/
+	background-attachment:fixed; /*Don't scroll the background with the page*/
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+}
+#container {
+	margin:auto; /*Center the container*/
+	margin-top:5%; /*Leave some space at the top and bottom of the container*/
+	margin-bottom:5%;
+	max-width:1000px; /*Allow it to shrink, but not get any wider*/
+	background: rgba(116,118,111, 0.4); /*A trick to get alpha transparency without making all child divs also transparent*/
+	-webkit-border-radius: 10px; /*These 3 lines are for curving the box corners for different browsers*/
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px; /*Gotta have space - text touching the edges of your box just looks ugly!*/
+	border: thin solid #e1e1e1;
+}
+#subcontainer {
+	max-width:964px; /*Allow it to shrink, but not get any wider*/
+	margin:auto; /*Create some space between the inner box and outer transparent box (container)*/
+	margin-top:20px;
+	margin-bottom:20px;
+	background: rgba(70,70,70, 0.4); /*This also has transparency, but it's dark grey*/
+	-webkit-border-radius: 10px; /*More curves*/
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:0px;
+	overflow:auto; /*This prevents the floats I made with the photos leave the box*/
+}
+#header {
+	width:100%;
+	height:61px; /*The exact height of the header image*/
+	background:url("images/heading.jpg");
+	-webkit-border-top-left-radius: 10px; /*The following is to curve ONLY the top left and right for different browsers*/
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#navbar {
+
+}
+ul.nav {
+	margin:0px;
+	padding:0px;
+	float:left; /*This is needed in order to get the buttons side-by-side*/
+	width:100%;
+	border:1px solid #42432d;
+	border-width:1px 0px;
+	background:url("images/navBackground.png");
+	box-shadow: inset 0px 0px 10px #000; /*Puts an inset shadow between the header image and the navbar*/
+}
+ul.nav li{
+	display:inline; /*This helps put the buttons inside the narrow navbar and side-by-side*/
+	padding:0px;
+	margin:0px;
+}
+ul.nav li:first-child a{
+	border-left:1px solid #42432d; /*Doesn't work with IE, but adds a left border to the FIRST button*/
+}
+ul.nav a:link, ul.nav a:visited { /*For the entire unordered list of buttons*/
+	color:#000;
+	background:#ce7229;	
+	padding:20px 40px 4px 10px;
+	float:left;
+	width:auto;
+	border-right:1px solid #42432d;
+	text-decoration:none;
+	font:bold 1em/1em Arial,Helvetica,sans-serif; /*Using shorthand CSS here (explanation: www.javascriptkit.com/dhtmltutors/cssshorthand.shtml)*/
+	text-transform:uppercase; /*Make all the text uppercase*/
+	text-shadow: 2px 2px 2px #555; /*Puts a drop-shadow on the text (in order: x-coord, y-coord, amount of blur, colour)*/
+}
+ul.nav a:hover {
+	color:#fff;
+	background:#ab5b1c;	
+}
+#home li.navHome a, #chords li.navChords a, #music li.navMusic a, #videos li.navVideos a{ /*Only the current page (body id) with have a button that is coloured to show it is on that page*/
+	background:#a64e0e;
+	color:#fff;
+	text-shadow:none;	
+}
+#main {
+	overflow:hidden; /*To get rid of the scrollbar that appears due to the auto overflow in the subcontainer*/
+	padding:40px;
+	text-align:center; /*Centers everything in main*/
+}
+ul.polaroid li { /*For the Polaroid photo effect in this unordered list of photos*/
+	list-style:none; /*Get rid of list bullets*/
+	float:left; /*Make photos go side-by-side instead of vertical*/
+	padding: 10px 10px 25px 10px; /*Bottom padding is more so that it is thicker - like Polaroid photos*/
+	background:#eee; /*Egg shell coloured instead of pure white*/
+	border: 1px solid #fff; /*Pure white border gives a kind of 3D effect when photos are overlapping*/
+	margin:-20px; /*This makes the photos overlap each other like they are just thrown together as a stack*/
+}
+ul.polaroid li.a { /*Each list item in the unordered list of photos*/
+	z-index:1; /*This makes each photo 1 layer above whatever is underneath (like the YouTube video)*/
+	-webkit-transform: rotate(-10deg); /*These two lines are for rotating the photo away from vertical (each photo is slightly different)*/
+	-moz-transform: rotate(-10deg); /*For Mozilla Firefox*/
+	-ms-transform: rotate(-10deg); /*For IE*/
+}
+ul.polaroid li.b {
+	z-index:1;
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);	
+	-ms-transform: rotate(-3deg);
+}
+ul.polaroid li.c {
+	z-index:1;
+	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	-ms-transform: rotate(4deg);
+}
+ul.polaroid li.d {
+	z-index:1;
+	-webkit-transform: rotate(7deg);
+	-moz-transform: rotate(7deg);
+	-ms-transform: rotate(7deg);
+}
+#pineapple {
+	position:fixed; /*This will make the box stay in place while the rest of the web page scrolls*/
+	right:0px; /*Positioned bottom-right*/
+	bottom:0px;
+	background:url("images/pineapple.gif");
+	width:105px;
+	height:255px;
+}
+#uke{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	background:url("images/fixeduke.gif");
+	width:98px;
+	height:290px;	
+}

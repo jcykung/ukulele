@@ -1,57 +1,46 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<title>Mr. Kung's Uke</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-<!--Give the body an id to identify each page later within the CSS to determine which navbutton to colourize-->
-<body id="home">
-	<!--Create the translucent, rounded container that everything sits on-->
-    <div id="container">
-        <!--The darker translucent subcontainer that everything sits in-->
-        <div id="subcontainer">
-            <!--The header which has a background image with the title - for liquid design so the image shrinks when screen size shrinks-->
-            <div id="header">
-            </div>
-            <!--The navbar containing a "list" of links - semantically the best way to organize a group of items-->
-            <div id="navbar">
-            	<!--Give the ul and each li a different class so they can be styled individually depending on which page the user is on-->
-                <ul class="nav">
-                    <li class="navHome"><a href="#">Home</a></li>
-                    <li class="navChords"><a href="http://www.kiwiukulele.co.nz/Kiwi-Ukulele-Chord-Chart.pdf" target="_blank">Chord Chart</a></li>
-                    <li class="navMusic"><a href="http://jenfo.com/ukulele/songs/soprano/" target="_blank">Tabs</a></li>
-                    <li class="navVideos"><a href="videos.html">Videos</a></li>
-                </ul>
-            </div>
-            <!--The main area with everything else in it-->
-            <div id="main" align="center">
-                <!--The video embed code from YouTube-->
-                <!--Note: I added &wmode=transparent to get YouTube to be under the photos because IE is stupid-->
-                <iframe width="480" height="360" src="https://www.youtube.com/embed/aSq1cez_flQ?rel=0&wmode=transparent" frameborder="0" allowfullscreen></iframe>
-                <!--A list of images - again, the best way to organize a group of items-->
-                <!--Each image has its own class in order to rotate the image differently in CSS-->
-                <ul class="polaroid">
-                    <li class="a">
-                        <img src="images/uke.jpg" />
-                    </li>
-                    <li class="b">
-                        <img src="images/uke2.jpg" />
-                    </li>
-                    <li class="c">
-                        <img src="images/uke3.jpg" />
-                    </li>
-                    <li class="d">
-                        <img src="images/uke4.jpg" />
-                    </li>
-                </ul>
-            </div>
+  <head>
+    <title>Mr. Kung's Ukulele</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="subcontainer">
+        <div class="header">
         </div>
+        <div class="navbar">
+          <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="https://www.harpkit.com/mm5/ukulele-chords.html" target="_blank">Chord Chart</a></li>
+              <li><a href="https://www.doctoruke.com/songs.html" target="_blank">Tabs</a></li>
+              <li><a href="videos.html">Videos</a></li>
+          </ul>
+        </div>
+        <div class="main">
+          <!--The video embed code from YouTube-->
+          <!--Note: I added &wmode=transparent to get YouTube to be under the photos because IE is stupid-->
+          <iframe width="480" height="360" src="https://www.youtube.com/embed/aSq1cez_flQ?rel=0&wmode=transparent" frameborder="0" allowfullscreen></iframe>
+          <!--A list of images - again, the best way to organize a group of items-->
+          <!--Each image has its own class in order to rotate the image differently in CSS-->
+          <ul class="polaroid">
+              <li class="a">
+                  <img src="images/uke.jpg" />
+              </li>
+              <li class="b">
+                  <img src="images/uke2.jpg" />
+              </li>
+              <li class="c">
+                  <img src="images/uke3.jpg" />
+              </li>
+              <li class="d">
+                  <img src="images/uke4.jpg" />
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div id="pineapple"></div>
+      <div id="uke"></div>
     </div>
-    <!--Two divs coming up with background images - both divs are position:fixed so they do not scroll with the page-->
-    <div id="pineapple">
-    </div>
-    <div id="uke">
-    </div>
-</body>
+  </body>
 </html>

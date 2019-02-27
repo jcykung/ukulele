@@ -1,47 +1,58 @@
 body,html {
-	margin:0px;
-	background:url("images/background.jpg"); /*Using a background wood pattern that repeats nicely*/
-	background-attachment:fixed; /*Don't scroll the background with the page*/
-	font-family:Geneva, Arial, Helvetica, sans-serif;
+  margin: 0px; /*Get rid of gap around web page*/
+  background-image: url("images/background.jpg"); /*Tiled wood image*/
+  background-attachment: fixed; /*Background won't scroll*/
+  font-family: Geneva, Arial, Helvetica, sans-serif;
 }
-#container {
-	margin:auto; /*Center the container*/
-	margin-top:5%; /*Leave some space at the top and bottom of the container*/
-	margin-bottom:5%;
-	max-width:1000px; /*Allow it to shrink, but not get any wider*/
-	background: rgba(116,118,111, 0.4); /*A trick to get alpha transparency without making all child divs also transparent*/
-	-webkit-border-radius: 10px; /*These 3 lines are for curving the box corners for different browsers*/
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	padding:10px; /*Gotta have space - text touching the edges of your box just looks ugly!*/
-	border: thin solid #e1e1e1;
-}
-#subcontainer {
-	max-width:964px; /*Allow it to shrink, but not get any wider*/
-	margin:auto; /*Create some space between the inner box and outer transparent box (container)*/
-	margin-top:20px;
-	margin-bottom:20px;
-	background: rgba(70,70,70, 0.4); /*This also has transparency, but it's dark grey*/
-	-webkit-border-radius: 10px; /*More curves*/
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	padding:0px;
-	overflow:auto; /*This prevents the floats I made with the photos leave the box*/
-}
-#header {
-	width:100%;
-	height:61px; /*The exact height of the header image*/
-	background:url("images/heading.jpg");
-	-webkit-border-top-left-radius: 10px; /*The following is to curve ONLY the top left and right for different browsers*/
-	-webkit-border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-#navbar {
 
+.container {
+  margin: auto; /*Center the container*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1000px; /*Container never wider than this*/
+  background: rgba(116,118,111, 0.4); /*Grey background with 0.4 opacity*/
+  border: thin solid #e1e1e1;
+  border-radius: 10px;
+  padding: 10px;
 }
+
+.subcontainer {
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  grid-template-columns: 1fr;
+  margin: 20px;
+  background: rgba(70,70,70, 0.4);
+  border-radius: 10px;
+}
+
+.header {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: url("images/heading.jpg");
+  height:61px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.navbar {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.main {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.gallery {
+  display: inline-grid;
+  grid-template-columns: 400px 400px;
+  grid-gap: 20px;
+  margin: 20px;
+}
+
 ul.nav {
 	margin:0px;
 	padding:0px;
@@ -75,16 +86,6 @@ ul.nav a:link, ul.nav a:visited { /*For the entire unordered list of buttons*/
 ul.nav a:hover {
 	color:#fff;
 	background:#ab5b1c;	
-}
-#home li.navHome a, #chords li.navChords a, #music li.navMusic a, #videos li.navVideos a{ /*Only the current page (body id) with have a button that is coloured to show it is on that page*/
-	background:#a64e0e;
-	color:#fff;
-	text-shadow:none;	
-}
-#main {
-	overflow:hidden; /*To get rid of the scrollbar that appears due to the auto overflow in the subcontainer*/
-	padding:40px;
-	text-align:center; /*Centers everything in main*/
 }
 ul.polaroid li { /*For the Polaroid photo effect in this unordered list of photos*/
 	list-style:none; /*Get rid of list bullets*/

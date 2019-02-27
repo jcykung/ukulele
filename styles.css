@@ -97,27 +97,19 @@ ul.polaroid li { /*For the Polaroid photo effect in this unordered list of photo
 }
 ul.polaroid li.a { /*Each list item in the unordered list of photos*/
 	z-index:1; /*This makes each photo 1 layer above whatever is underneath (like the YouTube video)*/
-	-webkit-transform: rotate(-10deg); /*These two lines are for rotating the photo away from vertical (each photo is slightly different)*/
-	-moz-transform: rotate(-10deg); /*For Mozilla Firefox*/
-	-ms-transform: rotate(-10deg); /*For IE*/
+	transform: rotate(-10deg); /*These two lines are for rotating the photo away from vertical (each photo is slightly different)*/
 }
 ul.polaroid li.b {
 	z-index:1;
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);	
-	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
 }
 ul.polaroid li.c {
 	z-index:1;
-	-webkit-transform: rotate(4deg);
-	-moz-transform: rotate(4deg);
-	-ms-transform: rotate(4deg);
+	transform: rotate(4deg);
 }
 ul.polaroid li.d {
 	z-index:1;
-	-webkit-transform: rotate(7deg);
-	-moz-transform: rotate(7deg);
-	-ms-transform: rotate(7deg);
+	transform: rotate(7deg);
 }
 #pineapple {
 	position:fixed; /*This will make the box stay in place while the rest of the web page scrolls*/
